@@ -1,0 +1,37 @@
+Making Directory with the help of commands
+=>mkdir directoryName
+
+Go inside Directory
+=>cd directoryName
+
+Create a file inside directory
+=> type null > fileName
+
+Delete file
+=> del fileName
+
+Sending HTML and Json Data:
+-> Inside app.get function we cn also write the object or passing json data in res.send but the best practice 
+is that use res.json because it convert the null or undefined data also to json . strigify.
+
+Difference between res.json() and res.send():
+
+res.json():
+Automatically sets the Content-Type header to application/json.
+
+res.send():
+If a string is passed, it sends it as plain text unless Content-Type is explicitly set.
+
+Routing in Express.js:
+
+Difference between res.send and res.status().send:
+
+res.send(data):
+
+Sends a response to the client.
+If no status is set, it defaults to 200 OK.
+
+res.status(code).send(data):
+
+Sets an explicit HTTP status code before sending the response.
+Useful for handling errors, success, or custom status codes.
