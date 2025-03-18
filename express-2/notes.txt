@@ -1,0 +1,5 @@
+Middleware:
+   A middleware is same as like route. The work of Middleware is to manage whats going on between response and request.
+
+1, Express.static => a built in middleware:
+   When serving a static website in express we can use the builtin express.static middlware. 
