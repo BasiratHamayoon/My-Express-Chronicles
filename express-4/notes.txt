@@ -1,0 +1,8 @@
+What is Middleware:
+    Middleware modifies our request to the server. This manage whats happening between request and response. It is a function that can be run before every request. When the client request for any function that request will be first send to the middleware. The middleware will perform processes on the request. If everything is set in middleware it will forward request to the next step that is to the server and then the server will send the response to the client. If the there's any thing wrong inside the middleware then the midlleware will send response to the client that there;s is something wrong. At this stage the request will not be reached to the server or function the client request for.
+
+    Definition:
+        A midlleware is a function that run on every request and response. it have access of request and response and it acts like a middleman between request and response. It can call the next middleware function in stack.
+
+    next():
+        This parametr in middleware can forward to the next middleware when the first middleware requirements fullfills.
