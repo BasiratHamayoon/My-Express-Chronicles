@@ -1,0 +1,12 @@
+HTTP METHODS:
+GET:
+    Retrieves data from the server.
+
+POST:
+    Sends data to the server to create a new resource.
+
+PUT:
+    Updates an existing resource or replaces it.
+
+DELETE:
+    Removes a resource from the server.
