@@ -10,3 +10,11 @@ PUT:
 
 DELETE:
     Removes a resource from the server.
+
+HTTP Status Code:
+
+1,"", "": FOr PAssing Information to the user we use 101 and so on.
+2,"", "": For Successfull receiving of data we use 201 and so on with 2,
+3,"". "": Used for redirection means the resouse you look for that will remove now for temporarly or permenently purpose.
+4, "", "": USd for client error mostly.
+5, "", "": Mostly used for server error.
