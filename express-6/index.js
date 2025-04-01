@@ -25,6 +25,32 @@ app.post("/login", (req, res) => {
     res.json({message: "Login Successfull!", token});
 });
 
+//Middleware to varify jwt token
+
+const varifyUser = (req, res, next) => {
+    const token  = req.header("Authorization")?.replace("Bearer ", "");
+    if(!token) {
+        return res.status(401).json({
+            message: "Access Denied! No Token Provided!"
+        });
+    }
+
+    try {
+        const decoded = jwt.verify(token, "qwhudey3y7846838492838yeudhjdhryedwoi" );
+        req.user = decoded;
+        next();
+    } catch (err) {
+        return res.status(400).json({
+            message: "Invailid Token!"
+        });
+    }
+};
+
+//Protected Route
+
+app.get("/profile", varifyUser, (req, res) => {
+    res.json({message: "Protected Route Accessed !", user: req.user});
+});
 
 
 app.listen(port , () => {
